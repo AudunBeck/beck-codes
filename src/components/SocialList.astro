@@ -1,0 +1,46 @@
+---
+const socialLinks: {
+  key: string;
+  friendlyName: string;
+  link: string;
+  icon: string;
+}[] = [
+  {
+    key: "github",
+    friendlyName: "Github",
+    link: "https://github.com/AudunBeck",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none" /><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 4c1.67 0 2.61 0.4 3 0.5c0.53 -0.43 1.94 -1.5 3.5 -1.5c0.34 1 0.29 2.22 0 3c0.75 1 1 2 1 3.5c0 2.19 -0.48 3.58 -1.5 4.5c-1.02 0.92 -2.11 1.37 -3.5 1.5c0.65 0.54 0.5 1.87 0.5 2.5c0 0.73 0 3 0 3M12 4c-1.67 0 -2.61 0.4 -3 0.5c-0.53 -0.43 -1.94 -1.5 -3.5 -1.5c-0.34 1 -0.29 2.22 0 3c-0.75 1 -1 2 -1 3.5c0 2.19 0.48 3.58 1.5 4.5c1.02 0.92 2.11 1.37 3.5 1.5c-0.65 0.54 -0.5 1.87 -0.5 2.5c0 0.73 0 3 0 3" /><path d="M9 19c-1.41 0 -2.84 -0.56 -3.69 -1.19c-0.84 -0.63 -1.09 -1.66 -2.31 -2.31" /></g></svg>`,
+  },
+  {
+    key: "bluesky",
+    friendlyName: "Bluesky",
+    link: "https://bsky.app/profile/did:plc:zpn6q2rw4445pv6khe5dbasy",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.47 5.94c1.83 1.37 3.81 4.14 4.53 5.63c0.72 -1.49 2.7 -4.26 4.53 -5.63c1.33 -0.99 3.47 -1.75 3.47 0.68c0 0.49 -0.28 4.08 -0.45 4.66c-0.57 2.03 -2.65 2.55 -4.5 2.23c3.24 0.55 4.06 2.36 2.28 4.17c-3.38 3.44 -4.85 -0.87 -5.23 -1.97c-0.07 -0.2 -0.1 -0.3 -0.1 -0.22c-0 -0.08 -0.03 0.02 -0.1 0.22c-0.38 1.1 -1.86 5.41 -5.23 1.97c-1.78 -1.81 -0.96 -3.63 2.28 -4.17c-1.85 0.31 -3.93 -0.21 -4.5 -2.23c-0.17 -0.58 -0.45 -4.18 -0.45 -4.66c0 -2.43 2.14 -1.67 3.47 -0.68Z"/></svg>`,
+  },
+  {
+    key: "linkedin",
+    friendlyName: "LinkedIn",
+    link: "https://www.linkedin.com/in/audun-beck",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><circle cx="4" cy="4" r="2" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><g stroke-dasharray="12" stroke-dashoffset="12"><path d="M4 10v10" stroke-dashoffset="0"/><path d="M10 10v10" stroke-dashoffset="0"/></g><path d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5"/></g></svg>`,
+  },
+];
+---
+
+<div class="flex flex-wrap items-end gap-x-2">
+  <p>Find me on</p>
+  <ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+    {socialLinks.map(({ friendlyName, link, icon }) => (
+        <li class="flex">
+          <a
+            class="hover:text-link inline-block"
+            href={link}
+            rel="noreferrer"
+            target="_blank"
+            >
+            <Fragment set:html={icon} />
+            <span class="sr-only">{friendlyName}</span>
+          </a>
+        </li>
+      ))}
+  </ul>
+</div>

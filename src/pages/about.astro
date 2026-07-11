@@ -1,0 +1,33 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+  description: "I'm a starter theme for Astro.build",
+  title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+  <h1 class="title mb-12">/about</h1>
+  <div class="prose prose-sm prose-cactus max-w-none">
+    <p>Software Developer, {" "} <em class="text-accent italic"> and full-time nerd.</em></p>
+    <p>
+      I work as a webdev, focusing on the full experience of the technical stack.
+      <br />
+      Starting at the development team's workflow and choice of tech.
+    </p>
+    <p>
+      I'm a senior consultant at{" "}
+      <a href="https://www.netlight.com/" class="text-accent" rel="noreferrer" target="_blank"
+        >Netlight</a
+      >
+      , a consultancy that focuses on learning and collective intelligence in the technology
+      industry.
+    </p>
+    <p>
+      When I don't work, I enjoy spending my time tinkering with software, play board games and
+      tabletop rpgs.
+      <br />I do also read a lot, and sometimes write.
+    </p>
+  </div>
+</PageLayout>
