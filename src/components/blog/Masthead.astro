@@ -25,8 +25,12 @@ const {
         src={data.coverImage.src}
       />
     </div>
-  )}
-{data.draft ? <span class="text-base text-red-500">(Draft)</span> : null}
+    )}
+<div class="mb-6">
+  <span>Post</span>
+  / <span class="capitalize">{data.growthStage}</span>
+  {data.draft ? <span class="text-red-500">(Draft)</span> : null}
+</div>
 <h1 class="title">
   {data.title}
 </h1>
