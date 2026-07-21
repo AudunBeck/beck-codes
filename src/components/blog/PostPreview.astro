@@ -9,10 +9,16 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 };
 
 const { as: Tag = "div", post, withDesc = false } = Astro.props;
+const GrowthIconMap = {
+  seedling: "🌱",
+  budding: "🌿",
+  evergreen: "🌲",
+};
 ---
 
-<FormattedDate class="text-muted min-w-30 font-semibold" date={post.data.publishDate} />
+<FormattedDate class="text-muted min-w-26 font-semibold" date={post.data.publishDate} />
 <Tag>
+  <span>{GrowthIconMap[post.data.growthStage]} </span>
   {post.data.draft && <span class="text-red-500">(Draft) </span>}
   <a class="cactus-link" href={`/posts/${post.id}/`}>
     {post.data.title}
