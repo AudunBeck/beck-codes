@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import type { HTMLTag, Polymorphic } from "astro/types";
 import FormattedDate from "@/components/FormattedDate.astro";
+import { GrowthIconMap } from "@/utils/growthStage";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
   post: CollectionEntry<"post">;
@@ -9,11 +10,6 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 };
 
 const { as: Tag = "div", post, withDesc = false } = Astro.props;
-const GrowthIconMap = {
-  seedling: "🌱",
-  budding: "🌿",
-  evergreen: "🌲",
-};
 ---
 
 <FormattedDate class="text-muted min-w-26 font-semibold" date={post.data.publishDate} />
