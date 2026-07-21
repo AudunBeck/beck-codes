@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
+import { GrowthIconMap } from "@/utils/growthStage";
 
 interface Props {
   content: CollectionEntry<"post">;
@@ -25,8 +26,12 @@ const {
         src={data.coverImage.src}
       />
     </div>
-  )}
-{data.draft ? <span class="text-base text-red-500">(Draft)</span> : null}
+    )}
+<div class="mb-6">
+  <span>Post </span>
+  {GrowthIconMap[data.growthStage]} <span class="capitalize">{data.growthStage}</span>
+  {data.draft ? <span class="text-red-500">(Draft)</span> : null}
+</div>
 <h1 class="title">
   {data.title}
 </h1>

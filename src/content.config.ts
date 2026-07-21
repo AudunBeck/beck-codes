@@ -35,6 +35,7 @@ const post = defineCollection({
         .optional()
         .transform((str) => (str ? new Date(str) : undefined)),
       pinned: z.boolean().default(false),
+      growthStage: z.enum(["seedling", "budding", "evergreen"]),
     }),
 });
 
