@@ -10,12 +10,13 @@
     "postbuild": "pagefind --site dist/client",
     "preview": "astro preview",
     "check": "astro check && biome check",
-    "lint": "biome check --write"
+    "lint": "biome check --write",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.1.5",
     "@astrojs/markdown-satteri": "^0.3.4",
     "@astrojs/mdx": "7.0.3",
-    "@astrojs/node": "^11.0.2",
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
     "@pagefind/component-ui": "^1.5.2",
@@ -49,7 +50,8 @@
     "autoprefixer": "^10.5.4",
     "pagefind": "^1.5.2",
     "reading-time": "^1.5.0",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "wrangler": "^4.114.0"
   },
   "packageManager": "pnpm@11.15.1+sha512.81350b07e53c9538a02f1f2303b4290fa2d7be04e56e2a970c4cc4b417dc761de196edabd49d55c7dc9580db81007c44143e4e3d7e462b3000d23c255122d065"
 }

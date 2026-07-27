@@ -1,7 +1,7 @@
 import fs from "node:fs";
+import cloudflare from "@astrojs/cloudflare";
 import { satteri, satteriHeadingIdsPlugin } from "@astrojs/markdown-satteri";
 import mdx from "@astrojs/mdx";
-import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
@@ -23,9 +23,7 @@ import { expressiveCodeOptions, siteConfig } from "./src/site.config";
 // https://astro.build/config
 export default defineConfig({
   site: siteConfig.url,
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: cloudflare({ prerenderEnvironment: "node" }),
   integrations: [
     expressiveCode(expressiveCodeOptions),
     icon(),

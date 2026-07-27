@@ -6,6 +6,6 @@
       "@/content/*": ["./content/*"]
     }
   },
-  "include": [".astro/types.d.ts", "**/*"],
+  "include": [".astro/types.d.ts", "**/*", "./worker-configuration.d.ts"],
   "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
 }
