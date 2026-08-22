@@ -26,6 +26,9 @@ importers:
       '@pagefind/component-ui':
         specifier: ^1.5.2
         version: 1.5.2
+      '@singi-labs/sifa-sdk':
+        specifier: ^0.14.2
+        version: 0.14.2
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.2.2(@types/node@26.2.0)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))
@@ -1420,6 +1423,18 @@ packages:
   '@sindresorhus/is@7.2.0':
     resolution: {integrity: sha512-P1Cz1dWaFfR4IR+U13mqqiGsLFf1KbayybWwdd2vfctdV6hDpUkgCY0nKOLLTMSoRd/jJNjtbqzf13K8DCCXQw==}
     engines: {node: '>=18'}
+
+  '@singi-labs/sifa-sdk@0.14.2':
+    resolution: {integrity: sha512-KXqwc05vY6bAuAigSVv97yYM4rhIjsUZ07IvwjkkgDQA42JEMqq029bYfMO0g313ziJF2CResc0BWpIHjXA3Rw==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      '@tanstack/react-query': ^5.100.0
+      react: '>=19'
+    peerDependenciesMeta:
+      '@tanstack/react-query':
+        optional: true
+      react:
+        optional: true
 
   '@speed-highlight/core@1.2.24':
     resolution: {integrity: sha512-qeW2e1l78afw8VhRPfPQ1Gjj+KU5XFQ/OFV5ti6eTa9bruO7mJyZtA4vw0ofqmA3tKCkROE9xLk3VZoeRc98nw==}
@@ -4936,6 +4951,10 @@ snapshots:
       string.prototype.codepointat: 0.2.1
 
   '@sindresorhus/is@7.2.0': {}
+
+  '@singi-labs/sifa-sdk@0.14.2':
+    dependencies:
+      zod: 4.4.3
 
   '@speed-highlight/core@1.2.24': {}
 
