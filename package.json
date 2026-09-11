@@ -18,7 +18,7 @@
     "@astrojs/markdown-satteri": "^0.3.7",
     "@astrojs/mdx": "^7.0.7",
     "@astrojs/rss": "4.0.19",
-    "@astrojs/sitemap": "3.7.3",
+    "@astrojs/sitemap": "^3.7.3",
     "@pagefind/component-ui": "^1.5.2",
     "@singi-labs/sifa-sdk": "^0.14.2",
     "@tailwindcss/vite": "4.3.3",
