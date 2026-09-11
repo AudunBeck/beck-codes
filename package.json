@@ -20,7 +20,7 @@
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "@pagefind/component-ui": "^1.5.2",
-    "@singi-labs/sifa-sdk": "^0.14.2",
+    "@singi-labs/sifa-sdk": "^0.18.20",
     "@tailwindcss/vite": "4.3.3",
     "astro": "^7.2.4",
     "astro-expressive-code": "^0.44.1",

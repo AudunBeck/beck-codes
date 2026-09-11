@@ -128,8 +128,8 @@ importers:
         specifier: ^1.5.2
         version: 1.5.2
       '@singi-labs/sifa-sdk':
-        specifier: ^0.14.2
-        version: 0.14.7
+        specifier: ^0.18.20
+        version: 0.18.20
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.2.2(@types/node@26.5.1)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))
@@ -1531,8 +1531,8 @@ packages:
     resolution: {integrity: sha512-P1Cz1dWaFfR4IR+U13mqqiGsLFf1KbayybWwdd2vfctdV6hDpUkgCY0nKOLLTMSoRd/jJNjtbqzf13K8DCCXQw==}
     engines: {node: '>=18'}
 
-  '@singi-labs/sifa-sdk@0.14.7':
-    resolution: {integrity: sha512-xq7jAobGE7EfJQMIvysX2cpSPqN+uHXyXmUonIdr7AQKc/rrvcX9WoViBef5ZbM1s3I8t05MAE9qkOI9UWlG9w==}
+  '@singi-labs/sifa-sdk@0.18.20':
+    resolution: {integrity: sha512-Ciye6bPvJGJXrpjz8D5eI2uTg7Bnw2zuPQK4T+1xk9RoBsZUzyDbdtp8p65UXZe1h6znWfJK4+a5R6mPpRUXzA==}
     engines: {node: '>=22'}
     peerDependencies:
       '@tanstack/react-query': ^5.100.0
@@ -5052,7 +5052,7 @@ snapshots:
 
   '@sindresorhus/is@7.2.0': {}
 
-  '@singi-labs/sifa-sdk@0.14.7':
+  '@singi-labs/sifa-sdk@0.18.20':
     dependencies:
       zod: 4.4.3
 
